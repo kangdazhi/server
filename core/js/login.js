@@ -30,6 +30,12 @@ OC.Login = _.extend(OC.Login || {}, {
 });
 
 $(document).ready(function() {
+	// The submit icon is positioned on the submit button. From the user point
+	// of view the icon is part of the button, so the clicks on the icon have to
+	// be redirected to the button.
+	$('#submit-icon').click(function() { $('#submit').click(); });
+	$('#submit-icon').css('cursor', $('#submit').css('cursor'));
+
 	$('form[name=login]').submit(OC.Login.onLogin);
 
 	$('#remember_login').click(OC.Login.rememberLogin);
