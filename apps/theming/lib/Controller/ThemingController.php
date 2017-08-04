@@ -172,7 +172,8 @@ class ThemingController extends Controller {
 			[
 				'data' =>
 					[
-						'message' => $this->l10n->t('Saved')
+						'message' => $this->l10n->t('Saved'),
+						'serverCssUrl' => $this->scssCacher->getCachedSCSS('core', '/core/css/server.scss')
 					],
 				'status' => 'success'
 			]
@@ -303,7 +304,8 @@ class ThemingController extends Controller {
 				'data' =>
 					[
 						'value' => $value,
-						'message' => $this->l10n->t('Saved')
+						'message' => $this->l10n->t('Saved'),
+						'serverCssUrl' => $this->scssCacher->getCachedSCSS('core', '/core/css/server.scss')
 					],
 				'status' => 'success'
 			]
